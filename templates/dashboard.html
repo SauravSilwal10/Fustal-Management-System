@@ -1,0 +1,104 @@
+{% extends 'main_admin.html' %}
+{% load static %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block label %}
+    Dashboard
+{% endblock%}
+
+{% block content %}
+<div class="cards">
+    <div class="card-single">
+        <div> 
+            <h1>{{ user_count }}</h1>
+            <span>Users</span>
+        </div>
+        <div>
+            <img src="{% static 'images/user.svg' %}" width="40px" height="30px" alt="">
+        </div>
+    </div>
+    <div class="card-single">
+        <div>
+            <h1>{{ bookings_count }}</h1>
+            <span>Bookings</span>
+        </div>
+        <div>
+            <img src="{% static 'images/user.svg' %}" width="40px" height="30px" alt="">
+        </div>
+    </div>
+    <div class="card-single">
+        <div>
+            <h1>{{ teams_count }}</h1>
+            <span>Teams</span>
+        </div>
+        <div>
+            <img src="{% static 'images/user.svg' %}" width="40px" height="30px" alt="">
+        </div>
+    </div>
+    <div class="card-single">
+        <div>
+            <h1>{{ tournaments_count }}</h1>
+            <span>Tournaments</span>
+        </div>
+        <div>
+            <img src="{% static 'images/user.svg' %}" width="40px" height="30px" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="recent-grid">
+    <div class="projects">
+        <div class="card">
+            <div class="card-header">
+                <h2>New Users</h2>
+
+                <a href="{% url 'users-list' %}"><button>See all>>></button></a>
+            </div>
+            <div class="card-body">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Username</td>
+                            <td>Email</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for users in user_list %}
+                        <tr>
+                            <td>{{users.first_name}} {{users.last_name}}</td>
+                            <td>{{users.username}}</td>
+                            <td>{{users.email}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="customers">
+        <div class="card">
+            <div class="card-header">
+                <h3>New Tournaments</h3>
+
+                <button>See all>>></button>
+            </div>
+            <div class="card-body">
+                <div class="customer">
+                    <div>
+                        <img src="{% static 'images/user.svg' %}" width="40px" height="40px" alt="">
+                        <div>
+                            <h4>5th dashain Cup</h4>
+                            <small></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
+

@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hero">
+  <div class="description">
+    <h1>Calling you all the futsal warriors !</h1>
+    <h2>
+      Presenting you with our brand new online booking system <br />
+      Now, book a futsal at your convenience.
+    </h2>
+    <a href="{% url 'booking' %}"><button>BOOK NOW</button></a>
+  </div>
+  <div class="hero-image">
+    <img height="600px" width="765px" src="{% static 'images/player.png' %}" alt="" />
+  </div>
+</div>
+<section id="facilities">
+  <div class="facilities-head">
+    <h1>Welcome to the Hamro futsal</h1>
+    <h2>Our Facilities</h2>
+    <p>
+      These are some awesome features available in our futsal. <br />
+      check it on your own.
+    </p>
+  </div>
+  <div class="facilities-cards">
+    <div class="f-card1">
+      <div class="f-card">
+        <div class="f-img">
+          <img src="{% static 'images/soccer.svg' %}" alt="" />
+        </div>
+        <h3>Two FutsaL Arena</h3>
+        <p>The futsal premises comprises of two 5A-side Arenas</p>
+      </div>
+      <div class="f-card">
+        <div class="f-img">
+          <img src="{% static 'images/car-parking.svg' %}" alt="" />
+        </div>
+        <h3>Public vehicle Parking</h3>
+        <p>The futsal court has its own parking facilities</p>
+      </div>
+      <div class="f-card">
+        <div class="f-img">
+          <img src="{% static 'images/shower.svg' %}"alt="" />
+        </div>
+        <h3>Showering facilities</h3>
+        <p>Hamro futsal provides showering facilities</p>
+      </div>
+    </div>
+    <div class="f-card2">
+      <div class="f-card">
+        <div class="f-img">
+          <img src="{% static 'images/chronometer.svg' %}" alt="" />
+        </div>
+        <h3>Open till 7AM-9PM</h3>
+        <p>Hamro futsal provides great timing facilities</p>
+      </div>
+      <div class="f-card">
+        <div class="f-img">
+          <img src="{% static 'images/juice.svg' %}" alt="" />
+        </div>
+        <h3>Drinks after Match</h3>
+        <p>Hamro futsal provides drinks after facilities</p>
+      </div>
+      <div class="f-card">
+        <div class="f-img">
+          <img src="{% static 'images/10.svg' %}" alt="" />
+        </div>
+        <h3>One free game after 10 game</h3>
+        <p>Hamro futsal provides one free game after 10 game</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pricing">
+  <div class="pricing-head">
+    <h2>Pricing</h2>
+  </div>
+  <div class="pricing-cards">
+    <div class="p-card">
+      <div class="weekdays">
+        <h2>Weekdays</h2>
+        <h3>Sunday-Thursday</h3>
+      </div>
+      <h2>PeakHour(7-9)(5-9)</h2>
+      <h3>Rs.1500</h3>
+      <h2>Non-PeakHour(9-4)</h2>
+      <h3>Rs.1200</h3>
+    </div>
+    <div class="p-card">
+      <div class="weekends">
+        <h2>Weekends</h2>
+        <h3>Friday-Saturday</h3>
+      </div>
+      <h2>PeakHour(7-9)(5-9)</h2>
+      <h3>Rs.1800</h3>
+      <h2>Non-PeakHour(9-4)</h2>
+      <h3>Rs.1500</h3>
+    </div>
+  </div>
+  <div class="notes">
+    <h3>
+      Notes!! Rates for bulk booking and booking for tournaments are
+      different. <br />
+      So, kindly leave a message
+    </h3>
+  </div>
+</section>
+<section class="blog">
+  <div class="blog-head">
+    <h4>Blog Post</h4>
+    <h2>Our Latest News</h2>
+  </div>
+  <div class="blog-cards">
+    <div class="b-card">
+      <div class="b-img">
+        <img src="{% static 'images/futsal.jpeg' %}" alt="" />
+      </div>
+      <div class="b-date">
+        <h5>By: Sachindra Silwal</h5>
+        <h5 class="date">Jan 19, 2021</h5>
+      </div>
+      <div class="b-title">
+        <h3>Hamro futsal to host 15th bankers futsal tournament.</h3>
+        <h4>
+          Hamro futsal located in hadigaun <br />
+          bishalnagar is to host the <br />
+          15th bankers futsal cup. the <br />
+          tournament is on the basis of <br />
+          round-robin format
+        </h4>
+        <p><a href="">Read more>></a></p>
+      </div>
+    </div>
+    <div class="b-card">
+      <div class="b-img">
+        <img src="{% static 'images/futsal2.jpg' %}"alt="" />
+      </div>
+      <div class="b-date">
+        <h5>By: Sachindra Silwal</h5>
+        <h5 class="date">Jan 19, 2021</h5>
+      </div>
+      <div class="b-title">
+        <h3>Hamro futsal to host 15th bankers futsal tournament.</h3>
+        <h4>
+          Hamro futsal located in hadigaun <br />
+          bishalnagar is to host the <br />
+          15th bankers futsal cup. the <br />
+          tournament is on the basis of <br />
+          round-robin format
+        </h4>
+        <p><a href="">Read more>></a></p>
+      </div>
+    </div>
+    <div class="b-card">
+      <div class="b-img">
+        <img src="{% static 'images/futsal3.jpg' %}" alt="" />
+      </div>
+      <div class="b-date">
+        <h5>By: Sachindra Silwal</h5>
+        <h5 class="date">Jan 19, 2021</h5>
+      </div>
+      <div class="b-title">
+        <h3>Hamro futsal to host 15th bankers futsal tournament.</h3>
+        <h4>
+          Hamro futsal located in hadigaun <br />
+          bishalnagar is to host the <br />
+          15th bankers futsal cup. the <br />
+          tournament is on the basis of <br />
+          round-robin format
+        </h4>
+        <p><a href=""> Read more>> </a></p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+    

@@ -1,0 +1,198 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #101010;
+  font-family: "Poppins", sans-serif;
+}
+button {
+  padding: 0.5rem 1.2rem;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 90%;
+  z-index: 1000;
+  background-color: #101010;
+  position: sticky;
+  top: 0;
+  margin: auto;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex: 1 1 20rem;
+}
+.logo h2 {
+  color: #1cff68;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 10vh;
+}
+ul a {
+  text-decoration: none;
+  color: #1cff68;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+a:hover {
+  color: white;
+}
+nav {
+  flex: 1 1 40rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 15rem;
+}
+.buttons button {
+  background: #1cff68;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.5s ease;
+  font-size: 15px;
+  border-radius: 20px;
+}
+.buttons button:hover {
+  color: black;
+  cursor: pointer;
+  background: #3ac067;
+}
+/* Book a pitch */
+.book-a-pitch {
+  width: 80%;
+  margin: auto;
+}
+.book-head h2 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: white;
+}
+.booking-form {
+  margin-top: 3rem;
+}
+input[type="date"] {
+  padding: 0.6rem;
+  background-color: #1cff68;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  width: 15rem;
+}
+.booking-arena input {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #1cff68;
+  color: #101010;
+  font-family: "Poppins", sans-serif;
+}
+input[type="text"] {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-datetime-edit-text {
+  color: #101010;
+  padding: 0 0.3em;
+}
+::-webkit-datetime-edit-month-field {
+  color: #101010;
+}
+::-webkit-datetime-edit-day-field {
+  color: #101010;
+}
+::-webkit-datetime-edit-year-field {
+  color: #101010;
+}
+.booking-date h3 {
+  color: white;
+}
+.booking-arena h3 {
+  color: white;
+}
+.booking-time h3 {
+  color: white;
+}
+.booking-time {
+  padding: 1rem 0rem;
+}
+.booking-date {
+  padding: 1rem 0rem;
+}
+.booking-arena {
+  padding: 1rem 0rem;
+}
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: flex-start;
+}
+.button-list button {
+  border: 1px solid #1cff68;
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+  color: #1cff68;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  width: 7.5rem;
+}
+.booking-button button {
+  border: none;
+  padding: 0.5rem 1.2rem;
+  background-color: #1cff68;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  width: 7.5rem;
+  transition: 0.4s;
+}
+.booking-button button:hover {
+  color: #1cff68;
+  background-color: white;
+}
+.court-button-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: flex-start;
+}
+.court-button-list button {
+  border: 1px solid white;
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  width: 7.5rem;
+}
+.booking-button {
+  margin: 1rem 0rem;
+}
+input[type="text"],
+select {
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}

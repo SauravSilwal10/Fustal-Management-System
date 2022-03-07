@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/signup.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>Hamro Futsal | Signup</title>
+</head>
+<body>
+    <div class="login-box">
+        <div class="form-wrapper">
+            <div class="form-head">
+                <h2>Mero <span>Futsal</span> </h2>
+            </div>
+            <form method="POST" action=".">{% csrf_token %}
+                <div class="first-last">
+                    <div class="first-name">
+                        <div class="firstname-detail">
+                            <img src="{% static '/images/user-16.png' %}" alt="">
+                            <label for="firstname">Firstname</label>
+                        </div>
+                        <input type="text" name="firstname" required>
+                    </div>
+                    <div class="last-name">
+                        <div class="lastname-detail">
+                            <img src="{% static '/images/user-16.png' %}" alt="">
+                            <label for="lastname">Lastname</label>
+                        </div>
+                        <input type="text" name="lastname" required>
+                    </div>
+                </div>
+                <div class="user-name">
+                    <div class="user-detail">
+                        <img src="{% static '/images/user-16.png' %}" alt="">
+                        <label for="username">Username</label>
+                    </div>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="e-mail">
+                    <div class="email-detail">
+                        <img src="{% static '/images/email-3-16.png' %}" alt="">
+                        <label for="email">Email</label>
+                    </div>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="pass-word">
+                    <div class="password-detail">
+                        <img src="{% static '/images/lock-7-16.png' %}" alt="">
+                        <label for="password">Password</label>
+                    </div>
+                    
+                        <input type="password" name="password" required>
+                </div>
+                <div class="pass-word">
+                    <div class="password-detail">
+                        <img src="{% static '/images/lock-7-16.png' %}" alt="">
+                        <label for="password">Confirm Password</label>
+                    </div>
+                    
+                        <input type="password" name="confirm-password" required>
+                </div>
+                <div class="btn">
+                    <button class="login-btn" type="submit">Signup</button>
+                </div>
+            </form>
+            <div class="need">
+                <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+            </div>
+        </div>
+    </div>
+    {% for message in messages %}
+    <div class="error-messages">
+        <p class="error">{{message}} </p>
+    </div>
+    {% endfor %}
+    
+</body>
+</html>

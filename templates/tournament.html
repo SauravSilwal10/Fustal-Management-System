@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+ | Tournaments
+{% endblock %}
+
+{% block content %}
+    <div class="tournaments">
+        <div class="tournament-head">
+            <h1>Upcoming Tournaments</h1>
+            <p> Register your futsal team in tournament organized by hamro futsal. </p>
+            <p> <span style="color: #1cff68;">Note:</span> You have to first create your team and then register into the tournament.</p>
+        </div>
+        {% for tournaments in tournament_list %}
+        <div class="tournament-banner">
+            <div class="banner-image">
+                <img src="{{tournaments.banner.url}}" alt="">
+            </div>
+            <div class="tournament-description">
+                <h2>{{tournaments.name}}</h2>
+                <p>{{tournaments.description}}</p>
+                <div class="prize-desc">
+                    <p>{{tournaments.prize}}</p>
+                </div>
+                <div class="tournament-btn">
+                    <a href="{% url 'tournament' %}{{tournaments.id}}"><button>Register for this tournament</button></a>
+                </div>
+            </div>
+        </div>   
+        {% endfor %} 
+    </div>
+{% endblock %}

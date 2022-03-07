@@ -1,0 +1,75 @@
+{% extends 'main_admin.html' %}
+{% load static %}
+
+{% block title %}
+    Add Equipment
+{% endblock %}
+
+{% block label %}
+    Equipments
+{% endblock%}
+
+{% block content %}
+<div class="container">
+    <div class="form-container">
+      <div class="form-head">
+          <h2>Add Equipment</h2>
+      </div>
+      <div class="form-wrapper">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="top-row">
+              <div class="eq-name">
+                <label for="eq-name">Equipment name</label>
+                <div class="eq-name-in">
+                  <input type="text" name="eq-name" required>
+                </div>
+              </div>
+              <div class="eq-brand">
+                <label for="eq-brand">Brand</label>
+                <div class="eq-brand-in">
+                  <input type="text" name="eq-brand-in" required>
+                </div>
+              </div>
+          </div>
+          <div class="mid-row">
+            <div class="eq-img">
+              <label for="eq-img">Image</label>
+              <div class="eq-image-in">
+                  <input type="file" name="eq-image-in" required>
+              </div>
+            </div>
+            <div class="eq-price">
+              <label for="eq-price">Price</label>
+              <div class="eq-image-in">
+                  <input type="number" name="eq-price-in" required>
+              </div>
+            </div>
+        </div>
+        <div class="last-row">
+          <button class="add-btn">Add Equipment</button>
+      </div>
+      </form>
+      </div>
+    </div>
+</div> 
+      {% for message in messages %}
+        <div class="error-messages">
+          <p class="error">{{message}} </p>
+        </div>
+      {% endfor %} 
+      
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+
+<script text="javascript">
+  setTimeout(fade_out, 2000);
+  function fade_out() {
+      $(".error-messages").fadeOut().empty();
+  }
+  $(".post-form")[0].reset(); // this is to reset the form 
+</script>
+{% endblock %}

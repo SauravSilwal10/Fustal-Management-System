@@ -1,0 +1,148 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: #101010;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.login-box {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.form-wrapper {
+  background-color: #101010;
+  border-radius: 5px;
+  box-shadow: 0 0 1rem 0.2rem;
+  width: 30%;
+}
+.form-head {
+  text-align: center;
+  padding: 1rem;
+}
+.form-head h2 {
+  color: white;
+}
+.form-head h2 span {
+  color: #1cff68;
+}
+.user-name {
+  display: flex;
+  flex-direction: column;
+}
+.user-name input {
+  padding: 0.5rem;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  border: none;
+}
+.pass-word {
+  display: flex;
+  flex-direction: column;
+}
+.pass-word input {
+  padding: 0.5rem;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  border: none;
+}
+input[type="text"] {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+input[type="password"] {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.login-btn {
+  padding: 0.5rem;
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  color: white;
+  background-color: #1cff68;
+  transition: 0.5s ease-in-out;
+}
+.login-btn:hover {
+  cursor: pointer;
+  font-weight: 800;
+  background-color: white;
+  color: #1cff68;
+}
+.user-detail {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  color: white;
+  margin: auto;
+}
+.user-detail img {
+  width: 20px;
+}
+.user-detail label {
+  padding: 0.5rem;
+}
+.password-detail label {
+  padding: 0.5rem;
+}
+.password-detail {
+  display: flex;
+  color: white;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.password-detail img {
+  width: 20px;
+}
+h4 {
+  padding-top: 1rem;
+  color: white;
+  font-weight: 400;
+}
+.error-messages {
+  height: 6vh;
+  width: 50vh;
+  background: #1cff68;
+  border-radius: 10px;
+  box-shadow: 0 0 1rem 0.2rem black;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 12rem;
+  margin-right: 2rem;
+  right: 0;
+}
+.error-messages p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+.need p {
+  text-align: center;
+  color: white;
+  padding-bottom: 0.8rem;
+}
+.need p a {
+  padding-left: 0.3rem;
+  color: #1cff68;
+}

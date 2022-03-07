@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+ | Register in tournaments
+{% endblock %}
+
+{% block content %}
+<h1 class="tour-name">Register your team in {{tournament.name}}</h1>
+<div class="tournament-details">
+    <div class="t-details">
+        <h4><span>Tournament Name</span>{{tournament.name}} </h4>
+        <p><span>Tournament Description</span>{{tournament.description}}</p>
+        <h4><span>Prize description</span> {{tournament.prize}}</h4>
+    </div>
+    <div class="t-banner">
+        <img src="{{tournament.banner.url}}" width="300px" alt="">
+        <form action="" method="POST">{% csrf_token %}
+            <div class="to-btn">
+            {% if user.team is not None %}
+            <a href=""><Button>Register</Button></a>
+            {% else %}
+            <a href=""><Button>Create Team</Button></a>
+            {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
+{% for message in messages %}
+        <div class="error-messages">
+          <p class="error">{{message}} </p>
+        </div>
+      {% endfor %} 
+{% endblock %}
+

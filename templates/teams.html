@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+| Create Team
+{% endblock %}
+
+{% block content %}
+<h1 style="color: white; margin-left: 35rem; padding-top: 1rem; padding-bottom: 1rem;">Create Your Team</h1>
+<div class="team-container">
+    <div class="team-wrapper">
+        <div class="form-head">
+            <h2 style=" color: #1cff68; padding-top: 1rem;">Create Team</h2>
+        </div>
+        <div class="tform-wrapper">
+            <form action="" method="POST">{% csrf_token %}
+                <div class="all-inputs">
+                    <div class="name">
+                        <label for="name">Team Name</label>
+                        <div class="name-in">
+                            <input type="text" name="name-in" required>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <label for="address">Address</label>
+                        <div class="address-in">
+                            <input type="text" name="address-in" required>
+                        </div>
+                    </div>
+                    <div class="ph-number">
+                        <label for="ph-number">Phone Number</label>
+                        <div class="ph-number">
+                            <input type="text" name="ph-number-in" required>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <label for="email">Email Address</label>
+                        <div class="email-in">
+                            <input type="email" name="email-in" required>
+                        </div>
+                    </div>
+                    <div class="captain">
+                        <label for="captain">Captain Name</label>
+                        <div class="captain">
+                            <input type="text" name="captain-in" required>
+                        </div>
+                    </div>
+                    <div class="no-of-players">
+                        <label for="no-of-players">Number of Members</label>
+                        <div class="no-of-players-in">
+                            <input type="number" name="no-of-players-in" required>
+                        </div>
+                    </div>
+                    <div class="team-logo">
+                        <label for="team-logo">Team Logo</label>
+                        <div class="team-logo-in">
+                            <input type="file" accept="image/" name="team-logo-in" required>
+                        </div>
+                    </div>
+                    <div class="t-btn">
+                        <Button>Create Team</Button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

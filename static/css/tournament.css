@@ -1,0 +1,141 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #101010;
+  font-family: "Poppins", sans-serif;
+}
+button {
+  padding: 0.5rem 1.2rem;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 90%;
+  z-index: 1000;
+  background-color: #101010;
+  position: sticky;
+  top: 0;
+  margin: auto;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex: 1 1 20rem;
+}
+.logo h2 {
+  color: #1cff68;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 10vh;
+}
+ul a {
+  text-decoration: none;
+  color: #1cff68;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+a:hover {
+  color: white;
+}
+nav {
+  flex: 1 1 40rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 15rem;
+}
+.buttons button {
+  background: #1cff68;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.5s ease;
+  font-size: 15px;
+  border-radius: 20px;
+}
+.buttons button:hover {
+  color: black;
+  cursor: pointer;
+  background: #3ac067;
+}
+
+/* Tournaments */
+.tournament-head {
+  color: white;
+  width: 80%;
+  padding-top: 3rem;
+  margin: auto;
+}
+.tournament-banner {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: #101010;
+  border-radius: 20px;
+  margin-top: 1rem;
+  box-shadow: 0 0 1rem 0.2rem;
+}
+.banner-image img {
+  padding-left: 1rem;
+  border-radius: 20px;
+  width: 350px;
+}
+.tournament-description {
+  padding-left: 2rem;
+}
+.tournament-description h2 {
+  padding: 1rem 0rem;
+  color: white;
+}
+.tournament-description p {
+  padding-bottom: 0.5rem;
+  color: white;
+}
+.prize-desc h5 {
+  color: white;
+  padding: 0.2rem 0;
+}
+.prize-desc h5 span {
+  color: #1cff68;
+  padding-right: 0.2rem;
+}
+.tournament-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.tournament-btn button {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  background-color: #1cff68;
+  transition: 0.5s ease-in-out;
+}
+.tournament-btn button:hover {
+  cursor: pointer;
+  font-weight: 800;
+  background-color: white;
+  color: #1cff68;
+}

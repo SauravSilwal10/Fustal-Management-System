@@ -1,0 +1,49 @@
+{% extends 'main_admin.html' %}
+{% load static %}
+
+{% block title %}
+    Registered Teams list 
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+{% endblock %}
+
+{% block script %}
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#listtable").DataTable();
+        })
+    </script>
+{% endblock %}
+
+{% block label %}
+    Tournaments
+{% endblock%}
+
+{% block content %}
+<table class="table table-bordered" id="listtable">
+    <thead>
+        <tr>
+            <th>Team Name</th>
+            <th>Phone number</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for teams in teamlist %}
+            <tr>
+                <td>{{ teams.name }}</td>
+                <td>{{ teams.phone_number }}</td>
+                <td>{{ teams.email }}</td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <a
+                        href="">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

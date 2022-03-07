@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>Hamro Futsal | Login</title>
+</head>
+<body>
+    <div class="login-box">
+        <div class="form-wrapper">
+            <div class="form-head">
+                <h2>Mero <span>Futsal</span> </h2>
+            </div>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="user-name">
+                    <div class="user-detail">
+                        <img src="{% static '/images/user-16.png' %}" alt="">
+                        <label for="username">Username</label>
+                    </div>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="pass-word">
+                    <div class="password-detail">
+                        <img src="{% static '/images/lock-7-16.png' %}" alt="">
+                        <label for="password">Password</label>
+                    </div>
+                    
+                        <input type="password" name="password" required>
+                </div>
+                <div class="btn">
+                    <button class="login-btn" type="submit">Login</button>
+                </div>
+            </form>
+            <div class="need">
+                <p>Need an account? <a href="{% url 'signup' %}">Signup</a></p>
+            </div>
+        </div>
+        <h4>
+            © 2021 Hamro Futsal. All Rights Reserved
+        </h4>
+    </div>
+    {% for message in messages %} 
+    <div class="error-messages">
+        <p class="error">{{message}} </p>
+    </div>
+    {% endfor %}
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
+<script text="javascript">
+    setTimeout(fade_out, 2000);
+    function fade_out() {
+        $(".error-messages").fadeOut().empty();
+    }
+    $(".post-form")[0].reset(); // this is to reset the form 
+</script>
+   
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends 'main_admin.html' %}
+{% load static %}
+
+{% block title %}
+    Add Users
+{% endblock %}
+
+{% block label %}
+    User
+{% endblock%}
+
+{% block content %}
+<div class="u-container">
+    <div class="u-wrapper">
+        <div class="form-head">
+            <h2>Add Users</h2>
+        </div>
+        <div class="uform-wrapper">
+            <form action="" method="POST">{% csrf_token %}
+                <div class="all-inputs">
+                    <div class="first-name">
+                        <label for="first-name">First name</label>
+                        <div class="first-name-in">
+                            <input type="text" name="first-name-in" required>
+                        </div>
+                    </div>
+                    <div class="last-name">
+                        <label for="last-name">Last name</label>
+                        <div class="last-name-in">
+                            <input type="text" name="last-name-in" required>
+                        </div>
+                    </div>
+                    <div class="user-name">
+                        <label for="user-name">Username</label>
+                        <div class="user-name">
+                            <input type="text" name="user-name-in" required>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <div class="email-in">
+                            <input type="email" name="email-in" required>
+                        </div>
+                    </div>
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <div class="password">
+                            <input type="password" name="password" required>
+                        </div>
+                    </div>
+                    <div class="is_staff">
+                        <label for="is_staff">Are you a Staff?</label>
+                        <div class="is_staff-in">
+                            <input type="checkbox" name="is_staff-in" value="is_staff">
+                        </div>
+                    </div>
+                    <div class="t-btn">
+                        <Button>Create User</Button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+{% endblock %}

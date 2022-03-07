@@ -1,0 +1,81 @@
+{% extends 'main_admin.html' %}
+{% load static %}
+{% block title %}
+    Add Tournaments
+{% endblock %}
+{% block label %}
+    Tournaments
+{% endblock %}
+{% block content %}
+    <div class="t-container">
+        <div class="t-wrapper">
+            <div class="form-head">
+                <h2>Add Tournaments</h2>
+            </div>
+            <div class="tform-wrapper">
+                <form action="" method="POST">{% csrf_token %}
+                    <div class="all-inputs">
+                        <div class="name">
+                            <label for="name">Tournament Title</label>
+                            <div class="name-in">
+                                <input type="text" name="name-in" required>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <label for="description">Tournament Description</label>
+                            <div class="description-in">
+                                <input type="text" name="description-in" required>
+                            </div>
+                        </div>
+                        <div class="prize-desc">
+                            <label for="prize-desc">Prize Description</label>
+                            <div class="prize-in">
+                                <input type="text" name="prize-in" required>
+                            </div>
+                        </div>
+                        <div class="banner">
+                            <label for="banner">Tournament Banner</label>
+                            <div class="banner-in">
+                                <input type="file" accept="image/" name="banner-in" required>
+                            </div>
+                        </div>
+                        <div class="created-at">
+                            <label for="created-at">Start Date</label>
+                            <div class="created-in">
+                                <input type="date" name="created-in" required>
+                            </div>
+                        </div>
+                        <div class="end-date">
+                            <label for="end-date">End Date</label>
+                            <div class="enddate-in">
+                                <input type="date" name="enddate-in" required>
+                            </div>
+                        </div>
+                        <div class="t-btn">
+                            <Button>Create Tournament</Button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% for message in messages %}
+        <div class="error-messages">
+          <p class="error">{{message}} </p>
+        </div>
+      {% endfor %} 
+      
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+
+<script text="javascript">
+  setTimeout(fade_out, 2000);
+  function fade_out() {
+      $(".error-messages").fadeOut().empty();
+  }
+  $(".post-form")[0].reset(); // this is to reset the form 
+</script>
+{% endblock %}

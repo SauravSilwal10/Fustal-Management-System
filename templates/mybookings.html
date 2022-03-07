@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+| My Bookings
+{% endblock %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+{% endblock %}
+
+{% block script %}
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#listtable").DataTable();
+        })
+    </script>
+{% endblock %}
+{% block content %}
+      <table class="table table-bordered" id="listtable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Payment Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in user.booking_set.all %}
+                <tr>
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.payment_method }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+

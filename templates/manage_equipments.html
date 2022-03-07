@@ -1,0 +1,53 @@
+{% extends 'main_admin.html' %}
+{% load static %}
+
+{% block title %}
+    Manage Equipment
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+{% endblock %}
+
+{% block script %}
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#listtable").DataTable();
+        })
+    </script>
+{% endblock %}
+
+{% block label %}
+    Equipments
+{% endblock%}
+
+{% block content %}
+<table class="table table-bordered" id="listtable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Created Date</th>
+            <th>Created By</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for equipments in equipment_list %}
+            <tr>
+                <td>{{ equipments.name }}</td>
+                <td>{{ equipments.brand }}</td>
+                <td>{{ equipments.price }}</td>
+                <td>{{ equipments.created_at }}</td>
+                <td>{{ equipments.user.first_name }} {{ equipments.user.last_name }}</td>
+                <td><a href="">Edit</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <a
+                        href="{{equipments.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
